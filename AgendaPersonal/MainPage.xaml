@@ -1,0 +1,78 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AgendaPersonal.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" Padding="20" BackgroundColor="#F5F5F5">
+
+            <!-- Título mejorado -->
+            <Label Text="Agenda" 
+                   FontSize="32"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="#5d478b">
+
+            </Label>
+
+            <Frame CornerRadius="15" 
+                   Padding="0"
+                   BackgroundColor="White"
+                   BorderColor="#EAEAEA"
+                   HeightRequest="65">
+                <Button Text="📋 Contactos Registrados" 
+                        Clicked="IrListaContactos"
+                        BackgroundColor="Transparent" 
+                        TextColor="#2C3E50"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        HeightRequest="65"/>
+            </Frame>
+
+            <Frame CornerRadius="15" 
+                   Padding="0"
+                   BackgroundColor="White"
+                   BorderColor="#EAEAEA"
+                   HeightRequest="65">
+                <Button Text="➕ Registrar Contacto" 
+                        Clicked="IrCrearContacto"
+                        BackgroundColor="Transparent" 
+                        TextColor="#2C3E50"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        HeightRequest="65"/>
+            </Frame>
+
+            <Frame CornerRadius="15" 
+                   Padding="0"
+                   BackgroundColor="White"
+                   BorderColor="#EAEAEA"
+                   HeightRequest="65">
+                <Button Text="⚙️ Configuración" 
+                        Clicked="IrConfiguracion"
+                        BackgroundColor="Transparent" 
+                        TextColor="#2C3E50"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        HeightRequest="65"/>
+            </Frame>
+
+            <Button x:Name="LogoutButton"
+                    Text="🔒 Cerrar Sesión" 
+                    Clicked="LogoutButton_Clicked"
+                    BackgroundColor="#FF6B6B"
+                    TextColor="White"
+                    CornerRadius="25"
+                    HeightRequest="55"
+                    WidthRequest="220"
+                    HorizontalOptions="Center"
+                    Margin="0,30">
+                <Button.Triggers>
+                    <EventTrigger Event="Pressed">
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
